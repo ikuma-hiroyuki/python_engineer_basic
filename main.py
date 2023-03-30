@@ -1,7 +1,9 @@
 import json
 import os
 
-from colorama import Fore
+from colorama import Fore, Back
+
+INVALID_INPUT = "無効な入力です。もう一度入力してください。"
 
 
 def clear_terminal():
@@ -18,14 +20,14 @@ def get_user_choice(choices):
                 raise ValueError()
             break
         except ValueError:
-            print("無効な入力です。もう一度入力してください。")
+            print(INVALID_INPUT)
     return user_choice
 
 
 def get_user_answer():
     """ユーザーに回答を入力してもらい、回答がA/B/C/Dのいずれかになるまでループする"""
     while True:
-        user_answer = input("回答を入力してください (A/B/C/D): ").upper()
+        user_answer = input("\n回答を入力してください (A/B/C/D): ").upper()
         if user_answer in ["A", "B", "C", "D"]:
             break
         else:
@@ -52,7 +54,7 @@ def display_result(question, user_answer):
 
 
 def select_json_file():
-    # jsonファイルを選択する関数
+    """jsonファイルを選択する"""
     json_files = os.listdir("jsons")
     clear_terminal()
     print("以下からjsonファイルを選択してください:")
@@ -62,16 +64,17 @@ def select_json_file():
     json_file = json_files[user_choice - 1]
     with open(f"jsons/{json_file}", "r", encoding='utf-8') as f:
         questions = json.load(f)
+    clear_terminal()
     return questions
 
 
-def play_game():
+def play_practice_exam():
     """模試を受ける"""
     num_correct = 0
     questions = select_json_file()
+    print(f"{Fore.RED}{Back.WHITE}合格を目指して頑張りましょう！{Fore.RESET}{Back.RESET}", end="\n\n")
     for i, question in enumerate(questions):
         if i > 0:
-            # 問題と問題の間をわかりやすくするために、ターミナルの幅いっぱいに"-"を表示する
             print("-" * os.get_terminal_size().columns, end="\n\n")
         display_question(question)
         user_answer = get_user_answer()
@@ -86,10 +89,10 @@ def play_game():
 def main():
     TRY_AGAIN = "もう一度模試を受けますか？ (Y/N)"
     while True:
-        play_game()
+        play_practice_exam()
         play_again = input(TRY_AGAIN).upper()
         while play_again not in ["Y", "N"]:
-            print("無効な入力です。もう一度入力してください。")
+            print(INVALID_INPUT)
             play_again = input(TRY_AGAIN).upper()
         if play_again == "N":
             print("模試を終了します。お疲れ様でした！")
