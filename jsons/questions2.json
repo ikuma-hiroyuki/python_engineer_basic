@@ -15,7 +15,7 @@
   },
   {
     "id": 2,
-    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n```\nprint('出力結果:')\ntry:\n  raise Exception('開始', 'エラー発生')\n  print('スタート')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('未知のエラー発生:', msg.args[1])\nelse:\n  print('Else表示')\n```",
+    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nprint('出力結果:')\ntry:\n  raise Exception('開始', 'エラー発生')\n  print('スタート')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('未知のエラー発生:', msg.args[1])\nelse:\n  print('Else表示')",
     "choices": [
       {
         "A": "出力結果: IOError発生:開始",
@@ -57,7 +57,7 @@
   },
   {
     "id": 5,
-    "question": "Pythonインタプリタで以下の出力を得るために正しい入力を選んでください。\n```D:\\home\\name\\python```",
+    "question": "Pythonインタプリタで以下の出力を得るために正しい入力を選んでください。\n\nD:\\home\\name\\python",
     "choices": [
       {
         "A": "print(r'D:\\home\\name\\python'r)",
@@ -71,7 +71,7 @@
   },
   {
     "id": 6,
-    "question": "Pythonインタプリタで次のリストが与えられているとします: `array = [6, [5, [1, 2]], 4, [3, 0]]`。2 を出力するために正しいインデックス操作を選んでください。",
+    "question": "Pythonインタプリタで次のリストが与えられているとします: \narray = [6, [5, [1, 2]], 4, [3, 0]] 。\n2 を出力するために正しいインデックス操作を選んでください。",
     "choices": [
       {
         "A": "array[1][1]",
@@ -81,11 +81,11 @@
       }
     ],
     "answer": "B",
-    "explanation": "リスト`array[1][1]`は`[1, 2]`であり、`array[1][1][1]`はこのリストの2番目の要素である2を返します。"
+    "explanation": "リスト array[1][1] は [1, 2] であり、 array[1][1][1] はこのリストの2番目の要素である2を返します。"
   },
   {
     "id": 7,
-    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n```\nfor i in range(20):\n    if i % 3 == 0:\n        print('{}は3で割り切れます'.format(i), end=' ')\n    elif i > 8 and i % 2 == 0:\n        break\n    else:\n        continue\n```\n",
+    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n\nfor i in range(20):\n    if i % 3 == 0:\n        print('{}は3で割り切れます'.format(i), end=' ')\n    elif i > 8 and i % 2 == 0:\n        break\n    else:\n        continue",
     "choices": [
       {
         "A": "0は3で割り切れます 3は3で割り切れます 6は3で割り切れます",
@@ -95,11 +95,11 @@
       }
     ],
     "answer": "B",
-    "explanation": "プログラムは0から19までの範囲で、3で割り切れる数を出力します。そのため、0、3、6、9が出力されます。10以降は、10が8より大きく偶数であるため、`break`によりループが終了します。"
+    "explanation": "プログラムは0から19までの範囲で、3で割り切れる数を出力します。そのため、0、3、6、9が出力されます。10以降は、10が8より大きく偶数であるため、 break によりループが終了します。"
   },
   {
     "id": 8,
-    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n```\ndef hoge(title, content='default_content', number=4):\n    content = 'content'\n    print(title, end=' ')\n    print(content, end=' ')\n    print(number)\n\nhoge(title='title_default', content='None', number=5)\n```\n",
+    "question": "次のプログラムを実行した際の出力結果を選びなさい。\n\ndef hoge(title, content='default_content', number=4):\n    content = 'content'\n    print(title, end=' ')\n    print(content, end=' ')\n    print(number)\n\nhoge(title='title_default', content='None', number=5)",
     "choices": [
       {
         "A": "title_default content 4",
@@ -109,11 +109,11 @@
       }
     ],
     "answer": "D",
-    "explanation": "関数`hoge`は、引数`content`の値を関数内で'content'に変更しています。また、引数`number`はデフォルト値4ですが、関数呼び出し時に5が指定されているため、出力は'title_default content 5'となります。"
+    "explanation": "関数 hoge は、引数 content の値を関数内で'content'に変更しています。また、引数 number はデフォルト値4ですが、関数呼び出し時に5が指定されているため、出力は'title_default content 5'となります。"
   },
   {
     "id": 9,
-    "question": "Pythonインタプリタで以下のコードを実行した場合の出力結果を選択してください。\n>>> 4 * 4.6 / 2",
+    "question": "Pythonインタプリタで以下のコードを実行した場合の出力結果を選択してください。\n\n>>> 4 * 4.6 / 2",
     "choices": [
       {
         "A": "9.2",
@@ -127,7 +127,7 @@
   },
   {
     "id": 10,
-    "question": "次のプログラムを実行した際の出力結果を選択してください。print(list(range(6)))",
+    "question": "次のプログラムを実行した際の出力結果を選択してください。\n\nprint(list(range(6)))",
     "choices": [
       {
         "A": "0, 1, 2, 3, 4, 5, 6",
@@ -141,7 +141,7 @@
   },
   {
     "id": 11,
-    "question": "以下のプログラムを実行した際の出力結果を選択してください。number_list = [3, 5, 7, 5, 5, 3, 7]; for i in range(number_list.count(5)): print(i, end=' ')",
+    "question": "以下のプログラムを実行した際の出力結果を選択してください。\n\nnumber_list = [3, 5, 7, 5, 5, 3, 7]; for i in range(number_list.count(5)): print(i, end=' ')",
     "choices": [
       {
         "A": "555",
@@ -183,7 +183,7 @@
   },
   {
     "id": 14,
-    "question": "以下のプログラムを実行した際の出力結果を選んでください。user1, user2, user3, user4 = '', 'yamada', 'kobayashi', 'watanabe'; chosen_user = user1 or user2 or user3 or user4; print(chosen_user)",
+    "question": "以下のプログラムを実行した際の出力結果を選んでください。\n\nuser1, user2, user3, user4 = '', 'yamada', 'kobayashi', 'watanabe'; chosen_user = user1 or user2 or user3 or user4; print(chosen_user)",
     "choices": [
       {
         "A": "yamada",
@@ -197,7 +197,7 @@
   },
   {
     "id": 15,
-    "question": "次のプログラムを実行したときの出力結果を選んでください。`(2, 4, 6) < (2, 3, 4, 5)`",
+    "question": "次のプログラムを実行したときの出力結果を選んでください。\n\n(2, 4, 6) < (2, 3, 4, 5)",
     "choices": [
       {
         "A": "(2, 3, 4, 5)",
@@ -211,7 +211,7 @@
   },
   {
     "id": 16,
-    "question": "次のプログラムを実行したときの出力結果を選んでください。`s = 'jump\\nover\\nthe\\twall'\\n\\nprint(len(s))`",
+    "question": "次のプログラムを実行したときの出力結果を選んでください。\n\ns = 'jump\\nover\\nthe\\twall'\\n\\nprint(len(s))",
     "choices": [
       {
         "A": "17",
@@ -295,7 +295,7 @@
   },
   {
     "id": 22,
-    "question": "次のprint文を実行した場合の出力結果を選択してください。\n```\nprint('出力結果:')\nprint('円周率は%5.3fである。' % math.pi)\n```",
+    "question": "次のprint文を実行した場合の出力結果を選択してください。\n\nprint('出力結果:')\nprint('円周率は%5.3fである。' % math.pi)",
     "choices": [
       {
         "A": "出力結果:円周率は3.141である。",
@@ -309,7 +309,7 @@
   },
   {
     "id": 23,
-    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n```\nprint('出力結果:')\ntry:\n  raise Exception('開始前', 'Exception発生')\n  print('開始')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('予期せぬ問題発生:', msg.args[1])\nelse:\n  print('Else表示')\n```",
+    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n\nprint('出力結果:')\ntry:\n  raise Exception('開始前', 'Exception発生')\n  print('開始')\nexcept IOError as msg:\n  print('IOError発生:', msg.args[0])\nexcept Exception as msg:\n  print('予期せぬ問題発生:', msg.args[1])\nelse:\n  print('Else表示')",
     "choices": [
       {
         "A": "出力結果:予期せぬ問題発生:開始前 Exception発生 Else表示",
@@ -337,7 +337,7 @@
   },
   {
     "id": 25,
-    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n```\nclass Sample:\n\n  c_list = []\n\n  def add_c_list(self, data):\n    self.c_list.append(data)\n\nprint('出力結果:', end=' ')\nsample1 = Sample()\nsample1.add_c_list('データ1')\n\nsample2 = Sample()\nsample2.add_c_list('データ2')\n\nfor item_data in sample1.c_list:\n  print(item_data, end=' ')\n```",
+    "question": "次のプログラムを実行した場合の出力結果を選択してください。\n\nclass Sample:\n\n  c_list = []\n\n  def add_c_list(self, data):\n    self.c_list.append(data)\n\nprint('出力結果:', end=' ')\nsample1 = Sample()\nsample1.add_c_list('データ1')\n\nsample2 = Sample()\nsample2.add_c_list('データ2')\n\nfor item_data in sample1.c_list:\n  print(item_data, end=' ')",
     "choices": [
       {
         "A": "出力結果:データ1",
@@ -365,7 +365,7 @@
   },
   {
     "id": 27,
-    "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n```\n26 // 8\n```",
+    "question": "Pythonインタプリタにて以下のように入力した場合の出力結果として正しいものを選びなさい。\n\n26 // 8",
     "choices": [
       {
         "A": "3",
@@ -379,7 +379,7 @@
   },
   {
     "id": 28,
-    "question": "Pythonインタプリタにて\n```>>>nested_list = [7, [4, [3, 1]], 5, [2, 9]]```\nと入力した時、1 を出力するための入力として正しいものを選びなさい。",
+    "question": "Pythonインタプリタにて\n\n>>>nested_list = [7, [4, [3, 1]], 5, [2, 9]]\nと入力した時、1 を出力するための入力として正しいものを選びなさい。",
     "choices": [
       {
         "A": "nested_list[1][1][1]",
@@ -393,7 +393,7 @@
   },
   {
     "id": 29,
-    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n```\nfor i in range(18):\n    if i % 4 == 0:\n        print('{}は4で割り切れます'.format(i), end=' ')\n    elif i > 7 and i % 3 == 0:\n        break\n    else:\n        continue\n```",
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nfor i in range(18):\n    if i % 4 == 0:\n        print('{}は4で割り切れます'.format(i), end=' ')\n    elif i > 7 and i % 3 == 0:\n        break\n    else:\n        continue",
     "choices": [
       {
         "A": "0は4で割り切れます 4は4で割り切れます 8は4で割り切れます",
@@ -407,7 +407,7 @@
   },
   {
     "id": 30,
-    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n```print(range(6))```",
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nprint(range(6))",
     "choices": [
       {
         "A": "[0, 1, 2, 3, 4, 5]",
@@ -421,7 +421,7 @@
   },
   {
     "id": 31,
-    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n```print(list(range(6)))```",
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nprint(list(range(6)))",
     "choices": [
       {
         "A": "list(0, 6)",
@@ -435,7 +435,7 @@
   },
   {
     "id": 32,
-    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n```\nnum_list = [6, 4, 2, 1, 4, 5, 6, 1]\nnum_list.remove(1)\nprint(num_list)```\n",
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nnum_list = [6, 4, 2, 1, 4, 5, 6, 1]\nnum_list.remove(1)\nprint(num_list)",
     "choices": [
       {
         "A": "[6, 4, 2, 4, 5, 6, 1]",
@@ -477,8 +477,7 @@
   },
   {
     "id": 35,
-    "question": "次のユーザー定義例外に関して正しいものを選んでください。",
-    "code": "class CustomError(Exception):\n    def __init__(self, data):\n        self.data = data\n    def __str__(self):\n        return repr(self.data)",
+    "question": "次のユーザー定義例外に関して正しいものを選んでください。\n\nclass CustomError(Exception):\n    def __init__(self, data):\n        self.data = data\n    def __str__(self):\n        return repr(self.data)",
     "choices": [
       {
         "A": "このユーザー定義例外は、Exceptionクラスのデフォルトの__init__をオーバーライドしている。",
@@ -492,8 +491,7 @@
   },
   {
     "id": 36,
-    "question": "次のクラスについて、正しい説明を選択肢から選んでください。",
-    "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return 'I am an animal.'",
+    "question": "次のクラスについて、正しい説明を選択肢から選んでください。\n\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n    def speak(self):\n        return 'I am an animal.'",
     "choices": [
       {
         "A": "このクラスのインスタンスは、speakメソッドを持っていない。",
@@ -535,8 +533,7 @@
   },
   {
     "id": 39,
-    "question": "次のコードについて、正しい説明を選択肢から選んでください。",
-    "code": "class Vehicle:\n    def __init__(self, wheels):\n        self.wheels = wheels\n\nclass Car(Vehicle):\n    def __init__(self, wheels, brand):\n        super().__init__(wheels)\n        self.brand = brand",
+    "question": "次のコードについて、正しい説明を選択肢から選んでください。\n\nclass Vehicle:\n    def __init__(self, wheels):\n        self.wheels = wheels\n\nclass Car(Vehicle):\n    def __init__(self, wheels, brand):\n        super().__init__(wheels)\n        self.brand = brand",
     "choices": [
       {
         "A": "CarクラスはVehicleクラスから継承されており、wheels属性とbrand属性を持っている。",
@@ -550,8 +547,7 @@
   },
   {
     "id": 40,
-    "question": "次のコードについて、正しい説明を選択肢から選んでください。",
-    "code": "class Parent:\n    def show(self):\n        print('Parent')\n\nclass Child(Parent):\n    def show(self):\n        print('Child')\n\nobj = Child()\nobj.show()",
+    "question": "次のコードについて、正しい説明を選択肢から選んでください。\n\nclass Parent:\n    def show(self):\n        print('Parent')\n\nclass Child(Parent):\n    def show(self):\n        print('Child')\n\nobj = Child()\nobj.show()",
     "choices": [
       {
         "A": "このコードはエラーを発生させる。",
