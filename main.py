@@ -78,10 +78,9 @@ def play_game():
         display_result(question, user_answer)
         if question["answer"] == user_answer:
             num_correct += 1
-    clear_terminal()
     # 正答数と正答率を表示する
-    print(f"全{len(questions)}問中、{num_correct}問が正解でした。")
-    print(f"正答率は {num_correct / len(questions) * 100:.2f}%です。")
+    print(f"{Fore.CYAN}全{len(questions)}問中、{num_correct}問が正解でした。")
+    print(f"正答率は {num_correct / len(questions) * 100:.2f}%です。{Fore.RESET}", end="\n\n")
 
 
 def main():
@@ -93,9 +92,9 @@ def main():
             print("無効な入力です。もう一度入力してください。")
             play_again = input(TRY_AGAIN).upper()
         if play_again == "N":
+            print("模試を終了します。お疲れ様でした！")
             break
         clear_terminal()
-        print("模試を終了します。お疲れ様でした！")
 
 
 if __name__ == "__main__":
