@@ -5,15 +5,15 @@ from colorama import Fore
 
 
 def clear_terminal():
-    # ターミナルをクリアする関数
+    """ターミナルをクリアする"""
     os.system("cls" if os.name == "nt" else "clear")
 
 
 def get_user_choice(choices):
-    # ユーザーにjsonファイルの選択肢を表示して、選択された番号を取得する関数
+    """ユーザーにjsonファイルの選択肢を表示して、選択された番号を取得する"""
     while True:
         try:
-            user_choice = int(input(f"jsonファイルを選択してください (1から{len(choices)}の番号を入力してください): "))
+            user_choice = int(input(f"ファイルを選択してください (1から{len(choices)}の番号を入力してください): "))
             if user_choice not in range(1, len(choices) + 1):
                 raise ValueError()
             break
@@ -23,7 +23,7 @@ def get_user_choice(choices):
 
 
 def get_user_answer():
-    # ユーザーに回答を入力してもらい、回答がA/B/C/Dのいずれかになるまでループする関数
+    """ユーザーに回答を入力してもらい、回答がA/B/C/Dのいずれかになるまでループする"""
     while True:
         user_answer = input("回答を入力してください (A/B/C/D): ").upper()
         if user_answer in ["A", "B", "C", "D"]:
@@ -34,7 +34,7 @@ def get_user_answer():
 
 
 def display_question(question):
-    # 問題を表示する関数
+    """問題を表示する"""
     print(f"問題{question['id']}. {question['question']}")
     for choice in question["choices"]:
         for key, value in choice.items():
@@ -42,7 +42,7 @@ def display_question(question):
 
 
 def display_result(question, user_answer):
-    # 回答の正誤を判定して、解説を表示する関数
+    """回答の正誤を判定して、解説を表示する"""
     print()
     if question["answer"] == user_answer:
         print(f"{Fore.GREEN}正解です！{Fore.RESET}")
@@ -66,7 +66,7 @@ def select_json_file():
 
 
 def play_game():
-    # ゲームをプレイする関数
+    """模試を受ける"""
     num_correct = 0
     questions = select_json_file()
     for i, question in enumerate(questions):
@@ -85,12 +85,13 @@ def play_game():
 
 
 def main():
+    TRY_AGAIN = "もう一度模試を受けますか？ (Y/N)"
     while True:
         play_game()
-        play_again = input("もう一度模試しますか？ (Y/N)").upper()
+        play_again = input(TRY_AGAIN).upper()
         while play_again not in ["Y", "N"]:
             print("無効な入力です。もう一度入力してください。")
-        play_again = input("もう一度模擬しますか？ (Y/N)").upper()
+        play_again = input(TRY_AGAIN).upper()
         if play_again == "N":
             break
         clear_terminal()
