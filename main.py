@@ -91,7 +91,7 @@ def main():
         play_again = input(TRY_AGAIN).upper()
         while play_again not in ["Y", "N"]:
             print("無効な入力です。もう一度入力してください。")
-        play_again = input(TRY_AGAIN).upper()
+            play_again = input(TRY_AGAIN).upper()
         if play_again == "N":
             break
         clear_terminal()
