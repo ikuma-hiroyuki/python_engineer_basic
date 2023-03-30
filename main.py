@@ -38,6 +38,7 @@ def get_user_answer():
 def display_question(question):
     """問題を表示する"""
     print(f"問題{question['id']}. {question['question']}")
+    print("\n選択肢:")
     for choice in question["choices"]:
         for key, value in choice.items():
             print(f"{key}: {value}")
