@@ -55,7 +55,7 @@ def display_result(question, user_answer):
 
 def select_json_file():
     """jsonファイルを選択する"""
-    json_files = os.listdir("jsons")
+    json_files = sorted(os.listdir("jsons"))
     clear_terminal()
     print("以下からjsonファイルを選択してください:")
     for i, json_file in enumerate(json_files):

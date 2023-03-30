@@ -26,5 +26,47 @@
     ],
     "answer": "C",
     "explanation": "正解は選択肢Cのprint('こんにちは!{}さん'.format('鈴木'))です。formatメソッドを使って文字列内の{}に'鈴木'を代入しています。他の選択肢では正しい文字列フォーマットが使用されていません。"
+  },
+  {
+    "id": 3,
+    "question": "ログを取得するためのPythonモジュールを選んでください。",
+    "choices": [
+      {
+        "A": "log4",
+        "B": "logger",
+        "C": "logging",
+        "D": "log"
+      }
+    ],
+    "answer": "C",
+    "explanation": "Pythonでログを取得するためには、標準ライブラリのloggingモジュールを使用します。"
+  },
+  {
+    "id": 4,
+    "question": "対話環境でのヒストリ情報が保存されているファイルを選んでください。",
+    "choices": [
+      {
+        "A": ".history_info",
+        "B": ".python_history",
+        "C": ".pyHist",
+        "D": ".history_data"
+      }
+    ],
+    "answer": "B",
+    "explanation": "Pythonの対話環境でのヒストリ情報は、.python_historyファイルに保存されています。"
+  },
+  {
+    "id": 5,
+    "question": "Pythonインタプリタで以下の出力を得るために正しい入力を選んでください。\n```D:\\home\\name\\python```",
+    "choices": [
+      {
+        "A": "print(r'D:\\home\\name\\python'r)",
+        "B": "print('D:\\home\\name\\python')",
+        "C": "print('D:\\\\home\\name\\python')",
+        "D": "print(r'D:\\home\\name\\python')"
+      }
+    ],
+    "answer": "D",
+    "explanation": "バックスラッシュ(\\)はエスケープ文字であるため、文字列の中で直接使用するとエラーが発生します。バックスラッシュを文字として使用するには、raw文字列として表現する必要があります。そのため、選択肢Dのprint(r'D:\\home\\name\\python')が正しい入力です。"
   }
 ]
