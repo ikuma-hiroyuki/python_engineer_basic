@@ -86,6 +86,11 @@ def play_practice_exam():
     # 正答数と正答率を表示する
     print(f"{Fore.CYAN}全{len(questions)}問中、{num_correct}問が正解でした。")
     print(f"正答率は {num_correct / len(questions) * 100:.2f}%です。{Fore.RESET}", end="\n\n")
+    # 70%以上で合格
+    if num_correct / len(questions) >= 0.7:
+        print(f"{Fore.GREEN}合格です！おめでとうございます！{Fore.RESET}")
+    else:
+        print(f"{Fore.RED}不合格です。もう一度取り組んでみましょう！{Fore.RESET}")
 
 
 def main():
