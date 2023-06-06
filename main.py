@@ -3,6 +3,7 @@ import os
 
 from colorama import Fore, Back
 
+TRY_AGAIN = "もう一度模試を受けますか？ (Y/N)"
 INVALID_INPUT = "無効な入力です。もう一度入力してください。"
 
 
@@ -38,7 +39,7 @@ def get_user_answer():
 def display_question(question):
     """問題を表示する"""
     print(f"問題{question['id']}. {question['question']}")
-    print("\n選択肢:")
+    print("\n\n選択肢:")
     for choice in question["choices"]:
         for key, value in choice.items():
             print(f"{key}: {value}")
@@ -88,7 +89,6 @@ def play_practice_exam():
 
 
 def main():
-    TRY_AGAIN = "もう一度模試を受けますか？ (Y/N)"
     while True:
         play_practice_exam()
         play_again = input(TRY_AGAIN).upper()
