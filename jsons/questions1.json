@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "question": "以下のfor文を実行した場合の、出力結果を選びなさい。\n\ncities = {'city1': 'Tokyo', 'city2': 'Osaka', 'city3': 'Kyoto'}\n\nprint('出力結果:')\nfor k, v in cities.items():\n print(v)",
+    "question": "以下のfor文を実行した場合の、出力結果を選びなさい。\n\ncities = {'city1': 'Tokyo', 'city2': 'Osaka', 'city3': 'Kyoto'}\n\nprint('出力結果:')\nfor k, v in cities.items():\n    print(v)",
     "choices": [
       {
         "A": "※順不同 出力結果: {'city1', 'Tokyo'} {'city2', 'Osaka'} {'city3', 'Kyoto'}",
@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "question": "問題文のプログラムを実行した場合の、出力結果を選びなさい。\n\nclass Example:\n\n  lst = []\n\n  def add_e_list(self, data):\n    self.lst.append(data)\n\nprint('出力結果:', end=' ')\nexample1 = Example()\nexample1.add_e_list('データ1')\n\nexample2 = Example()\nexample2.add_e_list('データ2')\n\nfor item_data in example1.lst:\n  print(item_data, end=' ')",
+    "question": "問題文のプログラムを実行した場合の、出力結果を選びなさい。\n\nclass Example:\n\n    lst = []\n\n    def add_e_list(self, data):\n      self.lst.append(data)\n\nprint('出力結果:', end=' ')\nexample1 = Example()\nexample1.add_e_list('データ1')\n\nexample2 = Example()\nexample2.add_e_list('データ2')\n\nfor item_data in example1.lst:\n    print(item_data, end=' ')",
     "choices": [
       {
         "A": "出力結果: データ1 データ2",
@@ -169,7 +169,7 @@
   },
   {
     "id": 13,
-    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nnumbers = [3, 5, 7, 5, 5, 3, 7]\nfor i in range(numbers.count(5)):\n print(i, end=' ')",
+    "question": "以下のプログラムを実行した際の出力結果を選びなさい。\n\nnumbers = [3, 5, 7, 5, 5, 3, 7]\nfor i in range(numbers.count(5)):\n    print(i, end=' ')",
     "choices": [
       {
         "A": "0 1 2 3",
@@ -453,10 +453,10 @@
     "question": "プログラムを実行し、下記の実行結果を得たい。\n\n下記のプログラムの(A)及び(B)に記述すべきコードの組み合わせを選択肢から選びなさい。\nfrom (A) import (B)\n\nnow = date.today()\n\nprint(now)",
     "choices": [
       {
-        "A": "date (B) datetime",
-        "B": "datetime (B) date",
-        "C": "datetime (B) datetime",
-        "D": "date (B) date"
+        "A": "(A) date (B) datetime",
+        "B": "(A) datetime (B) date",
+        "C": "(A) datetime (B) datetime",
+        "D": "(A) date (B) date"
       }
     ],
     "answer": "B",
