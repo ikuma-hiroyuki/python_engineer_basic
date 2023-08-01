@@ -57,7 +57,7 @@
   },
   {
     "id": 5,
-    "question": "Pythonインタプリタで以下の出力を得るために正しい入力を選んでください。\n```D:\\home\\name\\python```",
+    "question": "Pythonインタプリタで以下の出力を得るために正しい入力を選んでください。\nD:\\home\\name\\python",
     "choices": [
       {
         "A": "print(r'D:\\home\\name\\python'r)",
